@@ -1,0 +1,79 @@
+﻿@model Danfe.Nota.DanfePage
+
+<div class="bloco">
+    <div class="conteudo negrito fonte-7-pontos">CÁLCULO DO IMPOSTO</div>
+    <table>
+        <tr>
+            <td class="campo base-calculo-icms">
+                <div class="conteudo fonte-5-pontos">BASE DE CÁLCULO ICMS</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vBC.Value
+                </div>
+            </td>
+            <td class="campo valor-do-icms">
+                <div class="conteudo fonte-5-pontos">VALOR DO ICMS</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vICMS.Value
+                </div>
+            </td>
+            <td class="campo base-de-cálculo-do-icms-st">
+                <div class="conteudo fonte-5-pontos">BASE DE CÁLCULO ICMS ST</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vBCST.Value
+                </div>
+            </td>
+            <td class="campo valor-do-icms-st">
+                <div class="conteudo fonte-5-pontos">VALOR DO ICMS ST</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vST.Value
+                </div>
+            </td>
+            <td class="campo valor-total-dos-produtos">
+                <div class="conteudo fonte-5-pontos">VALOR TOTAL DOS PRODUTOS</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vProd.Value
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="sem-borda-superior">
+        <tr>
+            <td class="campo valor-do-frete">
+                <div class="conteudo fonte-5-pontos">VALOR DO FRETE</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vFrete.Value
+                </div>
+            </td>
+            <td class="campo valor-do-seguro">
+                <div class="conteudo fonte-5-pontos">VALOR DO SEGURO</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vSeg.Value
+                </div>
+            </td>
+            <td class="campo desconto">
+                <div class="conteudo fonte-5-pontos">DESCONTO</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vDesc.Value
+                </div>
+            </td>
+            <td class="campo outras-despesas-acessórias">
+                <div class="conteudo fonte-5-pontos">OUTRAS DESPESAS ACESSÓRIAS</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vOutro.Value
+                </div>
+            </td>
+            <td class="campo valor-do-ipi">
+                <div class="conteudo fonte-5-pontos">VALOR DO IPI</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vIPI.Value
+                </div>
+            </td>
+            <td class="campo valor-total-da-nota">
+                <div class="conteudo fonte-5-pontos">VALOR TOTAL DA NOTA</div>
+                <div class="conteudo">
+                    @Model.Header.Total.ICMSTot.vNF.Value
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

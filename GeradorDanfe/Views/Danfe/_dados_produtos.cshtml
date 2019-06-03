@@ -1,0 +1,184 @@
+﻿@model Danfe.Nota.DanfePage
+
+<div class="bloco">
+    <div class="conteudo negrito fonte-7-pontos">DADOS DOS PRODUTOS / SERVIÇOS</div>
+    <table id="dados_produtos">
+        <thead>
+            <tr>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">CÓDIGO</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">DESCRIÇÃO DOS PRODUTOS / SERVIÇOS</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">NCM/SH</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">CST</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">CFOP</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">UNID</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">QUANT</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">VLR.UNIT.</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">VLR.TOTAL</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">BC.ICMS</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">VL.ICMS</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">VLR I.P.I</div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">
+                        Aliq
+                        ICMS
+                    </div>
+                </th>
+                <th class="campo">
+                    <div class="conteudo fonte-5-pontos">
+                        Aliq
+                        IPI
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in @Model.Body.Det)
+        {
+            <tr>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @item.prod.cProd.Value
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @item.prod.xProd.Value
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @item.prod.NCM.Value
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @if (item.imposto.ICMS != null && item.imposto.ICMS.Value != "")
+                        {
+                            @item.imposto.ICMS.First().CST.Value
+                        }
+                        else
+                        {
+                            <span>0</span>
+                        }
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @item.prod.CFOP.Value
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @item.prod.uCom.Value
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @item.prod.qCom.Value
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @item.prod.vUnCom.Value
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @item.prod.vProd.Value
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @{
+                            var imposto = "0.00";
+
+                            if (item.ICMS40 != null)
+                            {
+                                @imposto
+                            }
+                            else
+                            {
+                                @imposto
+                            }
+                        }
+
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+
+                        @if (item.imposto.ICMS != null && item.imposto.ICMS.Value != "")
+                        {
+                            @item.imposto.ICMS.First().vICMS.Value
+                        }
+                        else
+                        {
+                            <span>0</span>
+                        }
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @if (item.imposto.IPI.IPITrib.vIPI.Value == string.Empty)
+                        {
+                            @item.imposto.IPI.IPITrib.vIPI.Value
+                        }
+                        else
+                        {
+                            <span>0</span>
+                        }
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @if (item.imposto.ICMS != null && item.imposto.ICMS.Value != "")
+                        {
+                            @item.imposto.ICMS.First().pICMS.Value
+                        }
+                        else
+                        {
+                            <span>0</span>
+                        }
+
+                    </div>
+                </td>
+                <td class="campo sem-borda-superior-inferior">
+                    <div class="conteudo fonte-7-pontos">
+                        @if (item.imposto.IPI.IPITrib.pIPI.Value == string.Empty)
+                        {
+                            @item.imposto.IPI.IPITrib.pIPI.Value
+                        }
+                        else
+                        {
+                            <span>0</span>
+                        }
+                    </div>
+                </td>
+            </tr>
+
+        }
+    </table>
+</div>

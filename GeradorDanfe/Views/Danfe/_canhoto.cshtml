@@ -1,0 +1,24 @@
+﻿@model Danfe.Nota.DanfePage
+<div class="bloco">
+    <table id="canhoto">
+        <tr>
+            <td class="campo recebemos" colspan="2">
+                <div class="conteudo fonte-5-pontos">RECEBEMOS @Model.Header.Emit.xNome.Value OS PRODUTOS CONSTANTES DA NOTA FISCAL INDICADA AO LADO</div>
+            </td>
+            <td class="campo numero-nfe" rowspan="2">
+                <div class="conteudo centralizado negrito">NF-e</div>
+                <div class="conteudo negrito">Nr: @Model.Header.Ide.nNF.Value</div>
+                <div class="conteudo negrito">Série: @Model.Header.Ide.serie.Value</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="campo data-recebimento">
+                <div class="conteudo fonte-5-pontos">DATA DE RECEBIMENTO</div>
+            </td>
+            <td class="campo assinatura">
+                <div class="conteudo fonte-5-pontos">IDENTIFICAÇÃO E ASSINATURA</div>
+            </td>
+        </tr>
+    </table>
+    <hr class="picote" />
+</div>

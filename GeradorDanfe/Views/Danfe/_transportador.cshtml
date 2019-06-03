@@ -1,0 +1,115 @@
+﻿@model Danfe.Nota.DanfePage
+
+<div class="bloco">
+    <div class="conteudo negrito fonte-7-pontos">TRANSPORTADOR / VOLUMES TRANSPORTADOS</div>
+    <table>
+        <tr>
+            <td class="campo razao-social-transportador">
+                <div class="conteudo fonte-5-pontos">NOME / RAZÃO SOCIAL</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.transporta.xNome.Value
+                </div>
+            </td>
+            <td class="campo frete-por-conta-transportador">
+                <div class="conteudo fonte-5-pontos">FRETE POR CONTA</div>
+                <div class="conteudo duas-coluna fonte-5-pontos">
+                    0 - EMITENTE <br />
+                    1 - DESTINAT.
+                </div>
+                <div class="conteudo duas-coluna centralizado negrito">
+                    <span class="caixa">
+                        @Model.Header.Transp.modFrete.Value
+                    </span>
+                </div>
+            </td>
+            <td class="campo codigo-antt-transportador">
+                <div class="conteudo fonte-5-pontos">CÓDIGO ANTT</div>
+                <div class="conteudo">
+                </div>
+            </td>
+            <td class="campo placa-veiculo-transportador">
+                <div class="conteudo fonte-5-pontos">PLACA DO VEÍCULO</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.veicTransp.placa.Value
+                </div>
+            </td>
+            <td class="campo uf-placa-transportador">
+                <div class="conteudo fonte-5-pontos">UF</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.veicTransp.UF.Value
+                </div>
+            </td>
+            <td class="campo cnpj-transportador">
+                <div class="conteudo fonte-5-pontos">CNPJ / CPF</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.transporta.CNPJ.Value
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="campo endereco-transportador">
+                <div class="conteudo fonte-5-pontos">ENDEREÇO</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.transporta.xEnder.Value
+                </div>
+            </td>
+            <td colspan="3" class="campo municipio-transportador">
+                <div class="conteudo fonte-5-pontos">MUNICÍPIO</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.transporta.xMun.Value
+                </div>
+            </td>
+            <td class="campo uf-transportador">
+                <div class="conteudo fonte-5-pontos">UF</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.transporta.UF.Value
+                </div>
+            </td>
+            <td class="campo inscricao-transportador">
+                <div class="conteudo fonte-5-pontos">INSCRIÇÃO ESTADUAL</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.transporta.IE.Value
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="sem-borda-superior">
+        <tr>
+            <td class="campo quantidade-transportador">
+                <div class="conteudo fonte-5-pontos">QUANTIDADE</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.vol.qVol.Value
+                </div>
+            </td>
+            <td class="campo especie-transportador">
+                <div class="conteudo fonte-5-pontos">ESPÉCIE</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.vol.esp.Value
+                </div>
+            </td>
+            <td class="campo marca-transportador">
+                <div class="conteudo fonte-5-pontos">MARCA</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.vol.marca.Value
+                </div>
+            </td>
+            <td class="campo numero-transportador">
+                <div class="conteudo fonte-5-pontos">NÚMERO</div>
+                <div class="conteudo">
+                </div>
+            </td>
+            <td class="campo peso-bruto-transportador">
+                <div class="conteudo fonte-5-pontos">PESO BRUTO</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.vol.pesoB.Value
+                </div>
+            </td>
+            <td class="campo peso-liquido-transportador">
+                <div class="conteudo fonte-5-pontos">PESO LÍQUIDO</div>
+                <div class="conteudo">
+                    @Model.Header.Transp.vol.pesoL.Value
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,39 @@
+﻿@model Danfe.Nota.DanfePrintViewer
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DANFE</title>
+    <link href="~/css/danfe/danfe.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="danfe">
+        @foreach (var page in Model.Pages)
+        {
+            <div class="page">
+                @if (@page.IsFirstPage)
+                {
+                    <partial name="~/Views/Danfe/_canhoto.cshtml" model="page" />
+                }
+                <partial name="~/Views/Danfe/_dados_nfe.cshtml" model="page" />
+                <partial name="~/Views/Danfe/_destinatario.cshtml" model="page" />
+                @if (@page.IsFirstPage)
+                {
+                    <partial name="~/Views/Danfe/_transportador.cshtml" model="page" />
+                    <partial name="~/Views/Danfe/_imposto.cshtml" model="page" />
+                    <partial name="~/Views/Danfe/_faturas.cshtml" model="page" />
+                }
+                <partial name="~/Views/Danfe/_dados_produtos.cshtml" model="page" />
+                @if (@page.IsLastPage)
+                {
+                    <partial name="~/Views/Danfe/_dados_adicionais.cshtml" model="page" />
+                }
+            </div>
+        }
+    </div>
+</body>
+</html>
+

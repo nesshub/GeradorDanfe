@@ -1,0 +1,17 @@
+﻿.conteudo {
+  font-size: 9pt;
+}
+.conteudo.fonte-5-pontos {
+  font-size: 5pt;
+}
+.conteudo.fonte-7-pontos {
+  font-size: 7pt;
+}
+.conteudo.centralizado {
+  margin: 0;
+  text-align: center;
+}
+.conteudo.negrito {
+  font-weight: bold;
+}
+/*# sourceMappingURL=danfe.fontes.css.map */

@@ -1,0 +1,90 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Danfe" Version="0.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Danfe\" />
+    <Folder Include="wwwroot\css\danfe\" />
+    <Folder Include="wwwroot\xml\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\danfe\danfe.table.min.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.table.less" />
+    <Content Remove="wwwroot\css\danfe\danfe.table.css.map" />
+    <Content Remove="wwwroot\css\danfe\danfe.table.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.pagina.min.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.pagina.less" />
+    <Content Remove="wwwroot\css\danfe\danfe.pagina.css.map" />
+    <Content Remove="wwwroot\css\danfe\danfe.pagina.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.min.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.less" />
+    <Content Remove="wwwroot\css\danfe\danfe.fontes.min.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.fontes.less" />
+    <Content Remove="wwwroot\css\danfe\danfe.fontes.css.map" />
+    <Content Remove="wwwroot\css\danfe\danfe.fontes.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.elementos.min.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.elementos.less" />
+    <Content Remove="wwwroot\css\danfe\danfe.elementos.css.map" />
+    <Content Remove="wwwroot\css\danfe\danfe.elementos.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.dimensoes.min.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.dimensoes.less" />
+    <Content Remove="wwwroot\css\danfe\danfe.dimensoes.css.map" />
+    <Content Remove="wwwroot\css\danfe\danfe.dimensoes.css" />
+    <Content Remove="wwwroot\css\danfe\danfe.css.map" />
+    <Content Remove="wwwroot\css\danfe\danfe.css" />
+    <Content Remove="Views\Danfe\_dados_adicionais.cshtml" />
+    <Content Remove="Views\Danfe\_transportador.cshtml" />
+    <Content Remove="Views\Danfe\_imposto.cshtml" />
+    <Content Remove="Views\Danfe\_faturas.cshtml" />
+    <Content Remove="Views\Danfe\_destinatario.cshtml" />
+    <Content Remove="Views\Danfe\_dados_produtos.cshtml" />
+    <Content Remove="Views\Danfe\_dados_nfe.cshtml" />
+    <Content Remove="Views\Danfe\_canhoto.cshtml" />
+    <Content Remove="wwwroot\xml\ExemploDanfe.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\danfe\danfe.table.min.css" />
+    <None Include="wwwroot\css\danfe\danfe.table.less" />
+    <None Include="wwwroot\css\danfe\danfe.table.css.map" />
+    <None Include="wwwroot\css\danfe\danfe.table.css" />
+    <None Include="wwwroot\css\danfe\danfe.pagina.min.css" />
+    <None Include="wwwroot\css\danfe\danfe.pagina.less" />
+    <None Include="wwwroot\css\danfe\danfe.pagina.css.map" />
+    <None Include="wwwroot\css\danfe\danfe.pagina.css" />
+    <None Include="wwwroot\css\danfe\danfe.min.css" />
+    <None Include="wwwroot\css\danfe\danfe.less" />
+    <None Include="wwwroot\css\danfe\danfe.fontes.min.css" />
+    <None Include="wwwroot\css\danfe\danfe.fontes.less" />
+    <None Include="wwwroot\css\danfe\danfe.fontes.css.map" />
+    <None Include="wwwroot\css\danfe\danfe.fontes.css" />
+    <None Include="wwwroot\css\danfe\danfe.elementos.min.css" />
+    <None Include="wwwroot\css\danfe\danfe.elementos.less" />
+    <None Include="wwwroot\css\danfe\danfe.elementos.css.map" />
+    <None Include="wwwroot\css\danfe\danfe.elementos.css" />
+    <None Include="wwwroot\css\danfe\danfe.dimensoes.min.css" />
+    <None Include="wwwroot\css\danfe\danfe.dimensoes.less" />
+    <None Include="wwwroot\css\danfe\danfe.dimensoes.css.map" />
+    <None Include="wwwroot\css\danfe\danfe.dimensoes.css" />
+    <None Include="wwwroot\css\danfe\danfe.css.map" />
+    <None Include="wwwroot\css\danfe\danfe.css" />
+    <None Include="Views\Danfe\_dados_adicionais.cshtml" />
+    <None Include="Views\Danfe\_transportador.cshtml" />
+    <None Include="Views\Danfe\_imposto.cshtml" />
+    <None Include="Views\Danfe\_faturas.cshtml" />
+    <None Include="Views\Danfe\_destinatario.cshtml" />
+    <None Include="Views\Danfe\_dados_produtos.cshtml" />
+    <None Include="Views\Danfe\_dados_nfe.cshtml" />
+    <None Include="Views\Danfe\_canhoto.cshtml" />
+    <None Include="wwwroot\xml\ExemploDanfe.xml" />
+  </ItemGroup>
+</Project>

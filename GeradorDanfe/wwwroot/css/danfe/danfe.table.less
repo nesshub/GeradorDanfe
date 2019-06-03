@@ -1,0 +1,50 @@
+﻿@borda: 1px solid #000000;
+
+table, tbody {
+    width: 100%;
+}
+
+table {
+    border: @borda;
+    border-collapse: collapse;
+}
+
+.sem-bordas {
+    border: none !important;
+}
+
+.sem-bordas-laterais {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.sem-borda-direita {
+    border-right: none !important;
+}
+
+.sem-borda-esquerda {
+    border-left: none !important;
+}
+
+.sem-borda-superior {
+    border-top: none;
+
+    td {
+        border-top: none !important;
+    }
+}
+
+.sem-borda-superior-inferior {
+    border-top: none !important;
+    border-bottom: none !important;
+
+    td {
+        border-top: none !important;
+        border-bottom: none !important;
+    }
+}
+
+.caixa {
+    border: @borda;
+    padding: 0.03cm;
+}

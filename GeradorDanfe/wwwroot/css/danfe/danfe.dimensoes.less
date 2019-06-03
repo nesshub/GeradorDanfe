@@ -1,0 +1,75 @@
+﻿.dimensao(@largura, @altura: 0.85cm) {
+    width: @largura;
+    height: @altura;
+}
+
+.campo{
+    &.recebemos {.dimensao(16.10cm)}
+    &.numero-nfe {.dimensao(4.50cm, 1.70cm)}
+    &.data-recebimento {.dimensao(4.10cm)}
+    &.assinatura {.dimensao(12cm)}
+
+        // Dados NFe
+    &.quadro-identificacao-emitente {.dimensao(10cm, 3.92cm)}
+    &.quadro-descricao-danfe {.dimensao(2.54cm, 3.92cm)}
+    &.quadro-codigo-de-barras-da-chave {.dimensao(8cm, 1.48cm)}
+    &.codigo-de-barras-da-chave {.dimensao(11.50cm, 1cm)}
+    &.chave-de-acesso {.dimensao(12.70cm)}
+    &.natureza-de-operacao {.dimensao(100%)}
+    &.inscricao-estadual-emitente {.dimensao(6.86cm)}
+    &.inscricao-estadual-st-emitente {.dimensao(6.86cm)}
+    &.cnpj-emitente {.dimensao(6.86cm)}
+
+    // destinatario
+    &.razao-social {.dimensao(12.32cm)}
+    &.cnpj-destinatario {.dimensao(5.33cm)}
+    &.data-emissao {.dimensao(2.92cm)}
+    &.endereco-destinatario {.dimensao(10.16cm)}
+    &.bairro-destinatario {.dimensao(4.83cm)}
+    &.cep-destinatario {.dimensao(2.67cm)}
+    &.data-entrada-destinatario {.dimensao(2.92cm)}
+    &.municipio-destinatario {.dimensao(7.11cm)}
+    &.fone-fax-destinatario {.dimensao(4.06cm)}
+    &.uf-destinatario {.dimensao(1.14cm)}
+    &.inscricao-destinatario {.dimensao(5.33cm)}
+    &.hora-entrada-saida {.dimensao(2.92cm)}
+
+    // transportador
+    &.razao-social-transportador {.dimensao(9.02cm)}
+    &.frete-por-conta-transportador {.dimensao(2.79cm)}
+    &.codigo-antt-transportador {.dimensao(1.78cm)}
+    &.placa-veiculo-transportador {.dimensao(2.29cm)}
+    &.uf-placa-transportador {.dimensao(0.76cm)}
+    &.cnpj-transportador {.dimensao(3.94cm)}
+    &.endereco-transportador{.dimensao(9.02cm)}
+    &.municipio-transportador{.dimensao(6.86cm)}
+    &.uf-transportador{.dimensao(0.76cm)}
+    &.inscricao-transportador{.dimensao(3.94cm)}
+    &.quantidade-transportador{.dimensao(2.92cm)}
+    &.especie-transportador{.dimensao(3.05cm)}
+    &.marca-transportador{.dimensao(3.05cm)}
+    &.numero-transportador{.dimensao(4.83cm)}
+    &.peso-bruto-transportador{.dimensao(3.43cm)}
+    &.peso-liquido-transportador{.dimensao(3.30cm)}
+
+    //Calculo imposto
+    &.base-calculo-icms{.dimensao(4.06cm)}
+    &.valor-do-icms{.dimensao(4.06cm)}
+    &.base-de-cálculo-do-icms-st{.dimensao(4.06cm)}
+    &.valor-do-icms-st{.dimensao(4.06cm)}
+    &.valor-total-dos-produtos{.dimensao(4.32cm)}
+
+    &.valor-do-frete{.dimensao(2.4cm)}
+    &.valor-do-seguro{.dimensao(2.4cm)}
+    &.desconto{.dimensao(2.5cm)}
+    &.outras-despesas-acessórias{.dimensao(3.83cm)}
+    &.valor-do-ipi{.dimensao(3.81cm)}
+    &.valor-total-da-nota{.dimensao(4.10cm)}
+
+    //Dados do produto
+    &.dados-produto{.dimensao(20.57cm, 6.77cm)}
+
+    //Dados adicionais
+    &.dados-adicionais{.dimensao(19.05cm, 2.94cm)}
+    &.reservado-fisco{.dimensao(7.94cm, 2.94cm)}
+}

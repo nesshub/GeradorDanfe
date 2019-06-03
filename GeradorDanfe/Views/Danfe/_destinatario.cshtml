@@ -1,0 +1,108 @@
+﻿@model Danfe.Nota.DanfePage
+
+<div class="bloco">
+    <div class="conteudo negrito fonte-7-pontos">DESTINATÁRIO/REMETENTE</div>
+    <table>
+        <tr>
+            <td colspan="3" class="campo razao-social">
+                <div class="conteudo fonte-5-pontos">NOME / RAZÃO SOCIAL</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.xNome.Value
+                </div>
+            </td>
+            <td class="campo cnpj-destinatario">
+                <div class="conteudo fonte-5-pontos">CNPJ / CPF</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.CNPJ.Value
+                </div>
+            </td>
+            <td class="campo data-emissao">
+                <div class="conteudo fonte-5-pontos">DATA DE EMISSÃO</div>
+                <div class="conteudo">
+                    @if (Model.Header.Ide.dEmi.Value != null && @Model.Header.Ide.dEmi.Value != "")
+                    {
+                        @Model.Header.Ide.dEmi.ToDateTime().ToString("dd/MM/yyyy");
+                    }
+                    else if (Model.Header.Ide.dhEmi.Value != null && @Model.Header.Ide.dhEmi.Value != "")
+                    {
+                        @Model.Header.Ide.dhEmi.ToDateTime().ToString("dd/MM/yyyy");
+                    }
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="campo endereco-destinatario">
+                <div class="conteudo fonte-5-pontos">ENDEREÇO</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.enderDest.xLgr.Value &nbsp;
+                    @Model.Header.Dest.enderDest.nro.Value &nbsp;
+                    @Model.Header.Dest.enderDest.xCpl.Value
+                </div>
+            </td>
+            <td class="campo bairro-destinatario">
+                <div class="conteudo fonte-5-pontos">BAIRRO / DISTRITO</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.enderDest.xBairro.Value
+                </div>
+            </td>
+            <td class="campo cep-destinatario">
+                <div class="conteudo fonte-5-pontos">CEP</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.enderDest.CEP.Value
+                </div>
+            </td>
+            <td class="campo data-entrada-destinatario">
+                <div class="conteudo fonte-5-pontos">DATA ENTRADA / SAÍDA</div>
+                <div class="conteudo">
+                    @if (Model.Header.Ide.dEmi.Value != null && @Model.Header.Ide.dEmi.Value != "")
+                    {
+                        @Model.Header.Ide.dEmi.ToDateTime().ToString("dd/MM/yyyy");
+                    }
+                    else if (Model.Header.Ide.dhSaiEnt.Value != null && @Model.Header.Ide.dhSaiEnt.Value != "")
+                    {
+                        @Model.Header.Ide.dhSaiEnt.ToDateTime().ToString("dd/MM/yyyy");
+                    }
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="campo municipio-destinatario">
+                <div class="conteudo fonte-5-pontos">MUNICÍPIO</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.enderDest.xMun.Value
+                </div>
+            </td>
+            <td class="campo fone-fax-destinatario">
+                <div class="conteudo fonte-5-pontos">TELEFONE</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.enderDest.fone.Value
+                </div>
+            </td>
+            <td class="campo uf-destinatario">
+                <div class="conteudo fonte-5-pontos">UF</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.enderDest.UF.Value
+                </div>
+            </td>
+            <td class="campo inscricao-destinatario">
+                <div class="conteudo fonte-5-pontos">INSCRIÇÃO ESTADUAL</div>
+                <div class="conteudo">
+                    @Model.Header.Dest.IE.Value
+                </div>
+            </td>
+            <td class="campo hora-entrada-saida">
+                <div class="conteudo fonte-5-pontos">HORA ENTRADA / SAÍDA</div>
+                <div class="conteudo">
+                    @if (Model.Header.Ide.dEmi.Value != null && @Model.Header.Ide.dEmi.Value != "")
+                    {
+                        @Model.Header.Ide.dEmi.ToDateTime().ToString("hh:mm");
+                    }
+                    else if (Model.Header.Ide.dhSaiEnt.Value != null && @Model.Header.Ide.dhSaiEnt.Value != "")
+                    {
+                        @Model.Header.Ide.dhSaiEnt.ToDateTime().ToString("hh:mm");
+                    }
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

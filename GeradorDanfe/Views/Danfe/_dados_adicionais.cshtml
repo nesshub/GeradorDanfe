@@ -1,0 +1,26 @@
+﻿@model Danfe.Nota.DanfePage
+
+<div class="bloco rodape">
+    <table id="dados_adicionais">
+        <tr>
+            <td class="campo">
+                <div class="conteudo negrito">DADOS ADICIONAIS</div>
+            </td>
+            <td class="campo">
+                <div class="conteudo negrito">RESERVADO AO FISCO</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="campo dados-adicionais">
+                <div class="conteudo">
+                    @Model.Footer.InfAdic.Value
+                </div>
+            </td>
+            <td class="campo reservado-fisco">
+                <div class="conteudo">
+                    @Model.Footer.InfAdic.InfAdFisco.Value
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

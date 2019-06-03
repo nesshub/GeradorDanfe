@@ -1,0 +1,106 @@
+﻿@model Danfe.Nota.DanfePage
+
+<div class="bloco">
+    <table id="dados-nfe">
+        <thead>
+            <tr>
+                <td rowspan="4" class="campo quadro-identificacao-emitente">
+                    <div class="conteudo negrito">
+                        <h3>@Model.Header.Emit.xNome.Value</h3>
+                    </div>
+                    <div class="conteudo">
+                        @Model.Header.Emit.enderEmit.xLgr.Value, @Model.Header.Emit.enderEmit.nro.Value <br />
+                        @Model.Header.Emit.enderEmit.xBairro.Value <br />
+                        @Model.Header.Emit.enderEmit.xMun.Value - @Model.Header.Emit.enderEmit.UF.Value <br />
+                        @Model.Header.Emit.enderEmit.CEP.Value <br />
+                        Tel: @Model.Header.Emit.enderEmit.fone.Value
+                    </div>
+                </td>
+                <td rowspan="4" class="campo quadro-descricao-danfe">
+                    <div class="conteudo negrito centralizado">
+                        DANFE
+                    </div>
+                    <div class="conteudo negrito centralizado fonte-7-pontos">
+                        DOCUMENTO AUXILIAR DA NOTA FISCAL ELETRÔNICA
+                    </div>
+                    <div class="conteudo">
+                        <div class="conteudo duas-coluna fonte-5-pontos">
+                            0 - ENTRADA <br />
+                            1 - SAÍDA
+                        </div>
+                        <div class="conteudo duas-coluna centralizado negrito">
+                            <span class="caixa">@Model.Header.Ide.tpEmis.Value</span>
+                        </div>
+                    </div>
+                    <div class="conteudo negrito fonte-7-pontos">
+                        Nr: @Model.Header.Ide.nNF.Value <br />
+                        Série: @Model.Header.Ide.serie.Value <br />
+                        Folha: @Model.Page/@Model.Size <br />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="campo quadro-codigo-de-barras-da-chave">
+                    <div class="conteudo centralizado"><h2>CODIGO DE BARRAS</h2></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="campo codigo-de-barras-da-chave">
+                    <div class="conteudo negrito fonte-5-pontos">
+                        CHAVE DE ACESSO DA NF-e
+                    </div>
+                    <div class="conteudo negrito">
+                        @Model.Footer.ProtNFe.infProt.chNFe.Value
+                    </div>
+                    <div class="conteudo centralizado fonte-7-pontos">
+                        Consulta de autenticidade no portal nacional da NF-e www.nfe.fazenda.gov.br/portal ou
+                        no site da Sefaz autorizadora
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="campo codigo-de-barras-da-chave">
+                    <div class="conteudo fonte-5-pontos">PROTOCOLO DE AUTORIZAÇÃO DE USO</div>
+                    <div class="conteudo">
+                        @Model.Footer.ProtNFe.infProt.nProt.Value
+
+                        @if (Model.Footer.ProtNFe.infProt.dhRecbto != null && Model.Footer.ProtNFe.infProt.dhRecbto.Value != "")
+                        {
+                            @Model.Footer.ProtNFe.infProt.dhRecbto?.ToDateTime().ToString();
+                        }
+                        else
+                        {
+                            <span></span>
+                        }
+
+
+                    </div>
+                </td>
+            </tr>
+        </thead>
+    </table>
+    <table class="sem-borda-superior">
+        <thead>
+            <tr>
+                <td colspan="3" class="campo natureza-de-operacao">
+                    <div class="conteudo fonte-5-pontos">NATUREZA DA OPERAÇÃO</div>
+                    <div class="conteudo">@Model.Header.Ide.natOp.Value</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="campo inscricao-estadual-emitente">
+                    <div class="conteudo fonte-5-pontos">INSCRIÇÃO ESTADUAL</div>
+                    <div class="conteudo">@Model.Header.Emit.IE.Value</div>
+                </td>
+                <td class="campo inscricao-estadual-st-emitente">
+                    <div class="conteudo fonte-5-pontos">INSCR.ESTADUAL SUBSTITUTO</div>
+                </td>
+                <td class="campo cnpj-emitente">
+                    <div class="conteudo fonte-5-pontos">CNPJ</div>
+                    <div class="conteudo">@Model.Header.Emit.CNPJ.Value</div>
+                </td>
+            </tr>
+        </thead>
+    </table>
+</div>
+

@@ -1,0 +1,32 @@
+﻿@model Danfe.Nota.DanfePage
+
+<div class="bloco">
+    <div class="conteudo negrito fonte-7-pontos">FATURAS</div>
+    <table class="sem-bordas-laterais">
+        <tr>
+            <td>
+                <table class="sem-bordas">
+                    <tr>
+                        @foreach (var duplicata in @Model.Header.Cobr.dup)
+                        {
+                            <td class="campo sem-bordas">
+                                <div class="conteudo tres-colunas">
+                                    <div class="conteudo fonte-5-pontos">NÚMERO</div>
+                                    <div class="conteudo fonte-7-pontos">@duplicata.nDup.Value</div>
+                                </div>
+                                <div class="conteudo tres-colunas">
+                                    <div class="conteudo fonte-5-pontos">NÚMERO</div>
+                                    <div class="conteudo fonte-7-pontos">@duplicata.dVenc.Value</div>
+                                </div>
+                                <div class="conteudo tres-colunas">
+                                    <div class="conteudo fonte-5-pontos">NÚMERO</div>
+                                    <div class="conteudo fonte-7-pontos">@duplicata.vDup.Value</div>
+                                </div>
+                            </td>
+                        }
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

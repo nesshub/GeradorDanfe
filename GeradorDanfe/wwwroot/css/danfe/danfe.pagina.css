@@ -1,0 +1,46 @@
+﻿.A4-size {
+  width: 210mm;
+  height: 297mm;
+}
+@page {
+  size: A4;
+  margin: 0;
+}
+@media all {
+  body {
+    display: flex;
+    justify-content: center;
+    background-color: #c3c3c3;
+  }
+  .page {
+    box-shadow: 1px 1px 10px #808080;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 5mm;
+    padding: 3mm;
+    width: 210mm;
+    height: 297mm;
+    display: block;
+  }
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+  .page {
+    background-color: #fff;
+    width: 210mm;
+    height: auto;
+    margin: 0;
+    display: block;
+    page-break-after: always;
+    overflow-y: no-display;
+  }
+  .page:first-of-type {
+    margin-top: -1mm;
+  }
+  .page:last-of-type {
+    page-break-after: auto;
+  }
+}
+/*# sourceMappingURL=danfe.pagina.css.map */
